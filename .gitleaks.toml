@@ -1,14 +1,7 @@
-[[allowlist]]
-description = "False positive: generic-api-key in core/rtw_mlme.c"
-rules = ["generic-api-key"]
-paths = ["core/rtw_mlme.c"]
+[extend]
+useDefault = true
 
-[[allowlist]]
-description = "False positive: generic-api-key in core/rtw_mlme.c"
-rules = ["generic-api-key"]
-paths = ["core/rtw_mlme.c"]
-
-[[allowlist]]
-description = "False positive: generic-api-key in core/rtw_mlme.c"
+[[allowlists]]
+description = "False positive: generic-api-key in core/rtw_mlme.c (prior decision)"
 rules = ["generic-api-key"]
 paths = ["core/rtw_mlme.c"]
