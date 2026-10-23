@@ -20,7 +20,7 @@ git clone https://github.com/juninmd/rtl88x2bu.git
 
 Entra no repo
 ```bash
-git clone https://github.com/juninmd/rtl88x2bu.git
+cd rtl88x2bu
 sudo make
 sudo make install
 sudo modprobe 88x2bu
