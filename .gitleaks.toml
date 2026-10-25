@@ -5,3 +5,7 @@ useDefault = true
 description = "False positive: generic-api-key in core/rtw_mlme.c (prior decision)"
 rules = ["generic-api-key"]
 paths = ["core/rtw_mlme.c"]
+[[allowlists]]
+description = "False positive: constantes do driver NDIS (Ndis802_11Encryption1KeyAbsent) parecem api key"
+rules = ["generic-api-key"]
+paths = ["include/wlan_bssdef.h"]
