@@ -1,8 +1,9 @@
-# Supressoes por fingerprint - triagem manual registrada no PR de seguranca.
+# Supressoes por fingerprint - triagem manual (auditoria de repos publicos).
+#
+# Fork de driver de kernel: os achados sao enums Ndis802_11*KeyAbsent
+# do upstream, nao credenciais. Varredura em HEAD (clone shallow),
+# fingerprints relativos ao checkout.
 
-# Fork de driver de kernel. Os achados sao enums Ndis802_11*KeyAbsent
-# do upstream, nao credenciais. Varredura feita em HEAD (clone shallow).
-
-C:/Users/jr_ac/AppData/Local/Temp/opencode/fix/rtl88x2bu/include/wlan_bssdef.h:generic-api-key:155
-C:/Users/jr_ac/AppData/Local/Temp/opencode/fix/rtl88x2bu/include/wlan_bssdef.h:generic-api-key:162
-C:/Users/jr_ac/AppData/Local/Temp/opencode/fix/rtl88x2bu/include/wlan_bssdef.h:generic-api-key:402
+include/wlan_bssdef.h:generic-api-key:155
+include/wlan_bssdef.h:generic-api-key:162
+include/wlan_bssdef.h:generic-api-key:402
