@@ -42,3 +42,12 @@ modules.order
 Module.symvers
 Mkfile.old
 .cache.mk
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+secrets/
+config/secrets.yml
