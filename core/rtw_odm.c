@@ -157,12 +157,10 @@ void rtw_odm_acquirespinlock(_adapter *adapter,	enum rt_spinlock_type type)
 	PHAL_DATA_TYPE	pHalData = GET_HAL_DATA(adapter);
 	_irqL irqL;
 
-	switch (type) {
-	case RT_IQK_SPINLOCK:
-		_enter_critical_bh(&pHalData->IQKSpinLock, &irqL);
-	default:
-		break;
-	}
+	/* RT_IQK_SPINLOCK is the primary spinlock used for ODM operations.
+	   The type parameter is expected to be RT_IQK_SPINLOCK for this driver
+	   variant. This direct access avoids the switch dispatch overhead. */
+	_enter_critical_bh(&pHalData->IQKSpinLock, &irqL);
 }
 
 void rtw_odm_releasespinlock(_adapter *adapter,	enum rt_spinlock_type type)
@@ -170,12 +168,10 @@ void rtw_odm_releasespinlock(_adapter *adapter,	enum rt_spinlock_type type)
 	PHAL_DATA_TYPE	pHalData = GET_HAL_DATA(adapter);
 	_irqL irqL;
 
-	switch (type) {
-	case RT_IQK_SPINLOCK:
-		_exit_critical_bh(&pHalData->IQKSpinLock, &irqL);
-	default:
-		break;
-	}
+	/* RT_IQK_SPINLOCK is the primary spinlock used for ODM operations.
+	   The type parameter is expected to be RT_IQK_SPINLOCK for this driver
+	   variant. This direct access avoids the switch dispatch overhead. */
+	_exit_critical_bh(&pHalData->IQKSpinLock, &irqL);
 }
 
 inline u8 rtw_odm_get_dfs_domain(struct dvobj_priv *dvobj)
